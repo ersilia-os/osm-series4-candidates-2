@@ -13,20 +13,10 @@ df = pd.read_csv(os.path.join(ROOT, "data", "data.csv"))
 mols = [Chem.MolFromSmiles(smi) for smi in list(df["Smiles"])]
 
 from descriptors.eosdescriptors.rdkit2d import Rdkit2d
-#from descriptors.eosdescriptors.ecfp import Ecfp
-#from descriptors.eosdescriptors.chembl import Chembl
-#from descriptors.eosdescriptors.signaturizer import Signaturizer
 
 
 descs = [
-    #Avalon(),
-    #Cddd(),
-    #Chembl(),
-    #Ecfp(),
-    #Mordred(),
-    Rdkit2d(),
-    #RdkitFpBits(),
-    #Signaturizer()
+    Rdkit2d()
 ]
 
 def calculate_descriptor(mols, desc):

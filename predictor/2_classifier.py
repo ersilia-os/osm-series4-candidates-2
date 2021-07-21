@@ -13,6 +13,7 @@ from sklearn.feature_selection import SelectKBest
 from sklearn import svm
 from sklearn.feature_selection import RFECV
 from sklearn.model_selection import StratifiedKFold
+from sklearn.feature_selection import VarianceThreshold
 
 from sklearn.metrics import auc
 from sklearn.metrics import roc_curve
@@ -75,7 +76,6 @@ def classifier_pipeline(descriptor_name):
             np.save(f, sigmas, allow_pickle=False)
         X = normalize(X, mus, sigmas)
     print("Filter zero variance")
-    from sklearn.feature_selection import VarianceThreshold
     sel = VarianceThreshold(threshold=0.0)
     sel.fit(X)
     joblib.dump(sel, os.path.join(ml_folder, "sel0.pkl"))

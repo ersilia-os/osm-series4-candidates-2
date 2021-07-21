@@ -15,6 +15,8 @@ MAX_SLOGP = 5
 MAX_NUMRINGS = 7
 MIN_QED = 0.35
 
+print("PHYSCHEM")
+
 df = pd.read_csv(os.path.join(OUTPUT, "data_1.csv"))
 
 mols = [Chem.MolFromSmiles(smi) for smi in tqdm(list(df["Smiles"]))]

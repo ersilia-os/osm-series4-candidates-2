@@ -1,0 +1,34 @@
+[
+    [
+        "chembl",
+        "regression"
+    ],
+    [
+        "chembl",
+        "classification"
+    ],
+    [
+        "ecfp",
+        "regression"
+    ],
+    [
+        "ecfp",
+        "classification"
+    ],
+    [
+        "rdkit2d",
+        "regression"
+    ],
+    [
+        "rdkit2d",
+        "classification"
+    ],
+    [
+        "rdkitfpbits",
+        "regression"
+    ],
+    [
+        "rdkitfpbits",
+        "classification"
+    ]
+]
