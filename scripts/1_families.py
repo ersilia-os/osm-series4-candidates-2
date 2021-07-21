@@ -88,7 +88,7 @@ def is_pyrazineamide(mol):
         return 0
 
 
-df=pd.read_csv("results/data_0.csv")
+df=pd.read_csv(os.path.join(OUTPUT, "data_0.csv"))
 smiles = list(df["Smiles"])
 
 mols = [Chem.MolFromSmiles(smi) for smi in tqdm(smiles)]
