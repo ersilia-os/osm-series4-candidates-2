@@ -5,8 +5,6 @@ import pandas as pd
 from rdkit import Chem
 import os
 
-print("FAMILIES")
-
 #substructures of interest:
 #Triazolo core
 pattern_triazolopyrazine = Chem.MolFromSmarts("*-c1nnc2cncc(-*)n12")

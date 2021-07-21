@@ -8,8 +8,6 @@ from rdkit import Chem
 from standardiser import standardise
 from tqdm import tqdm
 
-print("AGGREGATE")
-
 # Output directory
 
 if os.path.exists(OUTPUT):
@@ -74,7 +72,7 @@ class StandardizeSmiles(object):
 std = StandardizeSmiles()
 
 ik2smiles = {}
-for smi in tqdm(all_smiles[:10000]):
+for smi in tqdm(all_smiles):
     mol = std.standardize(smi)
     if mol is None:
         continue
