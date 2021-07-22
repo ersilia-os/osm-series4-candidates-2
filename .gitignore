@@ -1,5 +1,7 @@
 chemprop
 grover
+chemprop.zip
+grover.zip
 
 *.onnx
 */syba.pkl
