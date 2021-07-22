@@ -4,6 +4,7 @@ from tqdm import tqdm
 import pandas as pd
 from rdkit import Chem
 import os, sys
+import joblib
 
 print("ACCESSIBILITY SCORES")
 
@@ -25,7 +26,7 @@ df["SAScore"] = sa
 
 # RA Score
 
-MIN_RASCORE = 0.9
+MIN_RASCORE = 0.75
 
 import numpy as np
 from rdkit.Chem import AllChem
@@ -66,8 +67,22 @@ for mol in tqdm(mols):
 
 df["RAScore"]=RAScore
 
-df = df[df["SAScore"] <= MAX_SASCORE]
-df = df[df["RAScore"] >= MIN_RASCORE]
+# Syba score
+print("... loading syba")
+syba = joblib.load("../utils/syba.pkl")
+SybaScore = []
+for mol in tqdm(mols):
+    sc = syba.predict(mol=mol)
+    SybaScore += [sc]
 
+df["SybaScore"] = SybaScore
+
+print(df.shape[0])
+df = df[df["SAScore"] <= MAX_SASCORE]
+print(df.shape[0])
+df = df[df["RAScore"] >= MIN_RASCORE]
+print(df.shape[0])
+df = df[df["SybaScore"] > 0]
+print(df.shape[0])
 
 df.to_csv(os.path.join(OUTPUT, "data_3.csv"), index=False)

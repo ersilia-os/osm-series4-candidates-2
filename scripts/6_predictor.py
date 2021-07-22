@@ -142,6 +142,8 @@ lower_model.fit(X, y)
 
 df=pd.read_csv(os.path.join(OUTPUT, "data_5.csv")) # TODO CHANGE
 
+print(df.shape[0])
+
 smiles = list(df["Smiles"])
 
 Y = None

@@ -9,14 +9,14 @@ from rdkit.Chem.Descriptors import qed
 from rdkit.Chem.Descriptors import MolLogP
 from rdkit.Chem.rdMolDescriptors import CalcNumRings
 from rdkit.Chem.Descriptors import MolWt
-from rdkit.Chem.Lipinski import FractionCSP3
-from rdkit.Chem.Lipinski import HeavyAtomCount
-from rdkit.Chem.Lipinski import NumRotatableBonds
-from rdkit.Chem.Lipinski import NumHeteroatoms
-from rdkit.Chem.Fragments import fr_halogen
-from rdkit.Chem.Fragments import fr_alkyl_halide
+from rdkit.Chem.Descriptors import FractionCSP3
+from rdkit.Chem.Descriptors import HeavyAtomCount
+from rdkit.Chem.Descriptors import NumRotatableBonds
+from rdkit.Chem.Descriptors import NumHeteroatoms
+from rdkit.Chem.Descriptors import fr_halogen
+from rdkit.Chem.Descriptors import fr_alkyl_halide
 
-PRINT("PHYSCHEM")
+print("PHYSCHEM")
 
 MIN_MW = 300
 MAX_MW = 550
@@ -40,7 +40,7 @@ df["MolWt"] = [MolWt(mol) for mol in tqdm(mols)]
 df["SLogP"] = [MolLogP(mol) for mol in tqdm(mols)]
 df["NumRings"] = [CalcNumRings(mol) for mol in tqdm(mols)]
 df["Qed"] = [qed(mol) for mol in tqdm(mols)]
-df["FractionCSP3"] = [CalcFractionCSP3(mol) for mol in tqdm(mols)]
+df["FractionCSP3"] = [FractionCSP3(mol) for mol in tqdm(mols)]
 df["FrHalogen"] = [fr_halogen(mol) for mol in tqdm(mols)]
 df["HeavyAtom"] = [HeavyAtomCount(mol) for mol in tqdm(mols)]
 df["Rotatable"] = [NumRotatableBonds(mol) for mol in tqdm(mols)]

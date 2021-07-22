@@ -46,6 +46,7 @@ mdl = joblib.load(os.path.join(model_folder, "classifier.pkl"))
 
 yp = []
 done = 0
+print("Total", len(smiles))
 for chunk in chunker(smiles, 1000):
     print("Calculating descriptors")
     mols = [Chem.MolFromSmiles(smi) for smi in tqdm(chunk)]
