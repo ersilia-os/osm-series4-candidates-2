@@ -1,4 +1,8 @@
+grover
+
+*.onnx
 *.pkl
+*.pt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
