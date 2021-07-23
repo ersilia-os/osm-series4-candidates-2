@@ -36,15 +36,6 @@ ascending = {
    "SLogP"
 }
 
-descriptions = {
-   "EosId": "Test",
-   "IC50Pred": "Test",
-   "WhalesDist3Act": "Test",
-   "Similarity": "Test",
-   "SAScore": "Test",
-   "SLogP": "Solubility", 
-}
-
 for col in columns:
     if col in ascending:
         asc = True
@@ -57,7 +48,6 @@ if asc:
     st.sidebar.text("Low is better")
 else:
     st.sidebar.text("High is better")
-st.sidebar.text(descriptions[selection])
 
 st.write(df_)
 
