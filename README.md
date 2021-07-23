@@ -8,6 +8,7 @@ A third batch of molecules (150365) has been generated using a low-data generati
 
 ## Selection of best candidates
 All unique final molecules (405766) have undergone a recursive selection process based on physicochemical properties, synthetic accessibility and predicted activity as follows:
+![](images/selection-01.png)
 
 ## Run pipeline
 
