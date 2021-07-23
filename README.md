@@ -4,9 +4,9 @@ A new round of series 4 candidates for the [Open Source Malaria Project](https:/
 
 ## Data
 
-- All 405766 molecules generated (with duplicates eliminated) can be found [here](https://github.com/osm-series4-candidates-2/scripts/results/data_0.csv)
-- Selection of best 557 candidates according to the pipeline below, rendered the following [molecules](https://github.com/osm-series4-candidates-2/scripts/results/data_13.csv)
-- A final list of the **best** 90 candidates based on activity can be found [here](https://github.com/osm-series4-candidates-2/scripts/results/eosi_s4_candidates_90.csv)
+- All 405766 molecules generated (with duplicates eliminated) can be found [here](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_0.csv)
+- Selection of best 557 candidates according to the pipeline below, rendered the following [molecules](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_13.csv)
+- A final list of the **best** 90 candidates based on activity can be found [here](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/eosi_s4_candidates_90.csvv)
 
 ## Results Columns
 The molecules are presented in an excel file containing the following columns:
