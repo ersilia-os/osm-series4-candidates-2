@@ -10,6 +10,7 @@ data = os.path.join(ROOT, "scripts", "results", "processed.csv")
 
 st.set_page_config(layout="wide")# force wide display
 st.title("Molecules for OSM Series 4 by Ersilia Open Source Initiative")
+st.text("Learn about [Ersilia Open Source Initiative](https://ersilia.io)")
 
 @st.cache
 def load_data():
@@ -33,7 +34,7 @@ elif selection == "Similarity":
     df = df.sort_values('Similarity', ascending = False).head(20)
 else:
     df = df
-    
+
 st.write(df)
 
 n_cols = 10
