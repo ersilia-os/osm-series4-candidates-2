@@ -54,7 +54,8 @@ _cols = [c for c in list(df_.columns) if c not in {"InchiKey", "Smiles"}]
 st.write(df_[_cols])
 
 n_cols = 5
+n_rows = 4
 raw_html = mols2grid.display(df_, smiles_col = "Smiles",
 subset=["img"], tooltip=["Smiles", "EosId"],
-selection=False, n_cols=n_cols)._repr_html_()
-components.html(raw_html, width=None, height=900, scrolling=True)
+selection=False, n_cols=n_cols, n_rows=n_rows)._repr_html_()
+components.html(raw_html, width=None, height=600, scrolling=True)
