@@ -61,4 +61,4 @@ df = df[
 
 print(df.shape)
 
-df.to_csv(os.path.join(OUTPUT, "data_13.csv"))
+df.to_csv(os.path.join(OUTPUT, "data_13.csv"), index=False)
