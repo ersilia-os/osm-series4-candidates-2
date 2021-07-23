@@ -25,7 +25,7 @@ df=df.round(3) #round activity to 4 decimals
 
 columns = ["EosId", "IC50Pred", "DeepActivity", "Maip", "WhalesDist3Act", "Similarity", "SAScore", "RAScore", "SybaScore", "SLogP", "Qed"]
 
-selection = st.sidebar.selectbox("View Top 20 molecules by", columns)
+selection = st.selectbox("View Top 20 molecules by", columns)
 
 ascending = {
    "EosId",
@@ -45,9 +45,9 @@ for col in columns:
         df_ = df.sort_values(col, ascending = asc).head(20)
 
 if asc:
-    st.sidebar.text("Low is better")
+    st.text("Low is better")
 else:
-    st.sidebar.text("High is better")
+    st.text("High is better")
 
 st.write(df_)
 
