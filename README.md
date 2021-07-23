@@ -7,38 +7,51 @@ A new round of series 4 candidates for the [Open Source Malaria Project](https:/
 - All 405766 molecules generated (with duplicates eliminated) can be found [here](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_0.csv)
 - Selection of best 557 candidates according to the pipeline below, rendered the following [molecules](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_13.csv)
 - A final list of the **best** 90 candidates based on activity can be found [here](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/eosi_s4_candidates_90.csv)
+- 
 
 ## Results Columns
+
 The molecules are presented in an excel file containing the following columns:
-Identification
+
+### Identifiers
+
 - EosID: ID number from Ersilia Open Source Initiative
 - InchiKey
 - Smiles
-Activity predictions
-- IC50Pred: the lower the better. It is probably biased towards high values, so hopefully it is a conservative estimate. Includes confidence interval (Upper Bound (UB) and Lower Bound (LB))
-- DeepActivity: the higher the better. It is a composite z-score between several deep learning scores (chemprop, grover; trained on classification and regression tasks). Includes confidence interval (Upper Bound (UB) and Lower Bound (LB))
-- Maip: Activity prediction using the [MAIP tool](https://www.ebi.ac.uk/chembl/maip/)
-- WhalesDist3Act:
-Similarity to series 4
-- Similarity: tanimoto similarity to known series 4 compounds
-Accessibility:
-- SAScore: synthetic accessibility
-- RAScore: retrosynthetic accessibility as predicted by the [Reymond lab](https://github.com/reymond-group/RAscore)
--SybaScore: fragment-based accessibility score (https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2)
-Physicochemical properties:
+
+### Activity predictions
+
+- IC50Pred: Activity prediction based on multiple descriptors and classical ML models. The lower the better. It is probably biased towards high values, so hopefully it is a conservative estimate. Includes confidence interval (Upper Bound (UB) and Lower Bound (LB))
+- DeepActivity: Activity prediction based on deep learning models (Grover and ChemProp). The higher the better. It is a composite z-score between several deep learning scores (chemprop, grover; trained on classification and regression tasks). Includes confidence interval (Upper Bound (UB) and Lower Bound (LB))
+- Maip: Blood-stage antimalarial activity prediction using the [MAIP tool](https://www.ebi.ac.uk/chembl/maip/)
+
+### Applicability domain
+
+- WhalesDist3Act: WHALES descriptors distance to the top-3 actives in the training set. These
+descriptors are used for scaffold hopping
+- Similarity: Tanimoto similarity to known series 4 compounds
+
+### Accessibility:
+
+- SAScore: Synthetic accessibility. The lower the better.
+- RAScore: Retrosynthetic accessibility as predicted by the [Reymond lab](https://github.com/reymond-group/RAscore). The higher the better.
+- SybaScore: Fragment-based accessibility score (https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2). The higher the better.
+
+### Physicochemical properties:
+
 - SLogP: Solubility
-- QED: drug-likeness
-- NumRings: number of rings in the molecule
-- FractionCSP3: number of tertiary carbons
-- FrHalogen: number of halogen groups
-- HeavyAtom: heavy atom count
-- Rotatable: number of rotatable bonds
-- Heteroatoms: number of Heteroatoms
-- FrAlkylHalide: fragments containing Halides
+- QED: Drug-likeness
+- NumRings: Number of rings in the molecule
+- FractionCSP3: Number of tertiary carbons
+- FrHalogen: Number of halogen groups
+- HeavyAtom: Heavy atom count
+- Rotatable: Number of rotatable bonds
+- Heteroatoms: Number of Heteroatoms
+- FrAlkylHalide: Fragments containing Halides
 Molecular structure (1: existing, 0: not existing):
-- TriazoloHeteroaryl: contains an heteroaryl ring in the RHS
-- TriazoloPhenyl: contains a phenyl (no heteroatoms) in the RHS
-- TriazoloHeteroaryl - Para / - Meta / - Orto: contain substituents in para, meta or orto positions
+- TriazoloHeteroaryl: Contains an heteroaryl ring in the RHS
+- TriazoloPhenyl: Contains a phenyl (no heteroatoms) in the RHS
+- TriazoloHeteroaryl - Para / - Meta / - Orto: Contain substituents in para, meta or orto positions
 
 ## Molecule generation
 
