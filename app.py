@@ -49,7 +49,7 @@ if asc:
 else:
     st.text("High is better")
 
-_cols = columns[:1] + columns[3:]
+_cols = [c for c in list(df_.columns) if c not in {"InchiKey", "Smiles"}]
     
 st.write(df_[_cols])
 
