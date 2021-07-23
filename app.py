@@ -9,7 +9,7 @@ data = os.path.join(ROOT, "scripts", "results", "eosi_s4_candidates_90.csv")
 
 
 st.set_page_config(layout="wide")# force wide display
-st.title("Molecules for OSM Series 4 by Ersilia Open Source Initiative")
+st.title("Molecules for OSM Series 4 by Ersilia Open Source Initiative - Round 2")
 st.markdown("Open Source Malaria Issue [#34](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34) | Learn about [Ersilia Open Source Initiative](https://ersilia.io)")
 
 @st.cache
@@ -53,8 +53,8 @@ _cols = [c for c in list(df_.columns) if c not in {"InchiKey", "Smiles"}]
     
 st.write(df_[_cols])
 
-n_cols = 10
+n_cols = 5
 raw_html = mols2grid.display(df_, smiles_col = "Smiles",
 subset=["img"], tooltip=["Smiles", "EosId"],
 selection=False, n_cols=n_cols)._repr_html_()
-components.html(raw_html, width=None, height=600, scrolling=True)
+components.html(raw_html, width=None, height=900, scrolling=True)
