@@ -49,10 +49,12 @@ if asc:
 else:
     st.text("High is better")
 
-st.write(df_)
+_cols = columns[:1] + columns[3:]
+    
+st.write(df_[_cols])
 
 n_cols = 10
-raw_html = mols2grid.display(df.head(100), smiles_col = "Smiles",
+raw_html = mols2grid.display(df_, smiles_col = "Smiles",
 subset=["img"], tooltip=["Smiles", "EosId"],
 selection=False, n_cols=n_cols)._repr_html_()
 components.html(raw_html, width=None, height=600, scrolling=True)
