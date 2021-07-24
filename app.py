@@ -75,7 +75,10 @@ df_display = df_[_cols]
 
 formats = dict((c, "{:.2f}") for c in _cols[1:])
 
-st.dataframe(df_display.style.format(formats))
+try:
+    st.dataframe(df_display.style.format(formats))
+except:
+    st.dataframe(df_display)
 
 df_["Selection"] = ["{0}: {1}".format(selection, v) for v in list(df_[selection])]
 
