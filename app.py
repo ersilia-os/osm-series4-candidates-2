@@ -21,9 +21,6 @@ def load_data():
 
 df=load_data()
 
-#reorder columns to show activity values first
-df=df.round(2) #round activity to 4 decimals
-
 columns = ["EosId", "IC50Pred", "DeepActivity", "Maip", "WhalesDist3Act", "Similarity", "SAScore", "RAScore", "SybaScore", "SLogP", "Qed"]
 
 selection = st.selectbox("View top 30 molecules by", columns)
@@ -79,6 +76,8 @@ try:
     st.dataframe(df_display.style.format(formats))
 except:
     st.dataframe(df_display)
+
+df_ = df_.round(2)
 
 df_["Selection"] = ["{0}: {1}".format(selection, v) for v in list(df_[selection])]
 
