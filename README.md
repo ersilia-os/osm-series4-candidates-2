@@ -2,6 +2,11 @@
 
 A new round of series 4 candidates for the [Open Source Malaria Project](https://github.com/opensourcemalaria), including molecules generated from low-data generative models (adapted from the [ETH Modlab](https://github.com/ETHmodlab/virtual_libraries)) and molecules generated in a second round using the [Reinvent 2.0](https://github.com/MolecularAI/Reinvent) generative model with improved activity predictors. See Open Source Malaria discussion [#34](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34).
 
+We have tried to complement OSM issue [#29](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34) opened by Evariste Technologies. In that issue, a specific region of the chemical space is **exploited** to identify highly active compounds. Here, we provide a rougher **exploration** of the chemical space with the hope to identify alternatie lead compounds:
+
+![exploration_vs_exploitation](https://user-images.githubusercontent.com/19725330/126868711-f834d617-6a0d-44c5-927f-11abd36541b7.png)
+
+
 ## Data
 
 - All 405,766 molecules generated (with duplicates eliminated) can be found here: [data_0.csv](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_0.csv)
