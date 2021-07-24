@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/387736782.svg)](https://zenodo.org/badge/latestdoi/387736782)
+
 ## OSM Series 4 Candidates with Deep Generative Models - Round 2
 
 A new round of series 4 candidates for the [Open Source Malaria Project](https://github.com/opensourcemalaria), including molecules generated from low-data generative models (adapted from the [ETH Modlab](https://github.com/ETHmodlab/virtual_libraries)) and molecules generated in a second round using the [Reinvent 2.0](https://github.com/MolecularAI/Reinvent) generative model with improved activity predictors. See Open Source Malaria discussion [#34](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34).
