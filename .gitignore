@@ -1,7 +1,6 @@
 chemprop
 grover
-chemprop.zip
-grover.zip
+predictorapp
 
 *.onnx
 */syba.pkl
