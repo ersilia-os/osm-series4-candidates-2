@@ -75,6 +75,7 @@ For transparency and reproducibility, we provide code to run the full pipeline f
 
 * [chemprop](https://drive.google.com/file/d/1WDN3NRTC4T98f-6St9YT8wDXO8foZOg5/view?usp=sharing)
 * [grover](https://drive.google.com/file/d/11_zSh1635KcP6GGgiVTozmE96A1N-z-U/view?usp=sharing)
+* [predictorapp](https://drive.google.com/file/d/1skShCUFMrpkLFJvYqvxbQU5DpPsC86Ii/view?usp=sharing)
 * [syba.pkl](https://drive.google.com/file/d/1tPA1vprB7gEwxMy_25Cz_PqDIEtzOBXK/view?usp=sharing) (save it in `utils/syba.pkl`)
 * [ra_model.onnx](https://drive.google.com/file/d/1x_Y5oOZOnxkb1hHjs8B9a8wlbF8izlGf/view?usp=sharing) (save it in `utils/ra_model.onnx`)
 
