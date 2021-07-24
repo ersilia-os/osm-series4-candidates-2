@@ -57,9 +57,9 @@ descriptors are used for scaffold hopping
 
 ## Molecule generation steps
 
-1. A first batch of molecules were generated in May2021 using [Reinvent 2.0](https://github.com/MolecularAI/Reinvent). A detailed explanation as well as results analysis of this first round can be found in our GitHub repo [ersilia-os/osm-series4-candidates](https://github.com/ersilia-os/osm-series4-candidates). We generated 116,728 new series 4 candidates.
-2. A second batch of molecules (209,310) has been generated for the purposes of this analysis using Reinvent 2.0 in exploration mode and optimizing for activity based on a simple QSAR model build with RDKIT descriptors.
-3. A third batch of molecules (150,365) has been generated using a [low-data generative model](https://github.com/ETHmodlab/virtual_libraries) taking as pre-training populations the ChEMBL and a large fragments library.
+1. A first batch of molecules were generated in May2021 using [Reinvent 2.0](https://github.com/MolecularAI/Reinvent). A detailed explanation as well as results analysis of this first round can be found in our GitHub repo [ersilia-os/osm-series4-candidates](https://github.com/ersilia-os/osm-series4-candidates). We generated 116,728 new series 4 candidates. [Code](https://github.com/ersilia-os/osm-series4-candidates).
+2. A second batch of molecules (209,310) has been generated for the purposes of this analysis using Reinvent 2.0 in exploration mode and optimizing for activity based on a simple QSAR model build with RDKIT descriptors. [Code](https://drive.google.com/drive/folders/1YDfnBz8EEKw5bB6q5htM0cVbOf8A8N_n?usp=sharing).
+3. A third batch of molecules (150,365) has been generated using a [low-data generative model](https://github.com/ETHmodlab/virtual_libraries) taking as pre-training populations the ChEMBL and a large fragments library. [Code](https://drive.google.com/drive/folders/1YCj5l2jzpXlyB6aPK5JjgTyfzttNbC3k?usp=sharing).
 
 ## Selection of best candidates
 
