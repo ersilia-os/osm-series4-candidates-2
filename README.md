@@ -1,17 +1,17 @@
 ## OSM Series 4 Candidates with Deep Generative Models - Round 2
 
-A new round of series 4 candidates for the [Open Source Malaria Project](https://github.com/opensourcemalaria), including molecules generated from low-data generative models (adapted from the [ETH Modlab](https://github.com/ETHmodlab/virtual_libraries)) and molecules generated in a second round using the [Reinvent 2.0](https://github.com/MolecularAI/Reinvent) generative model with improved activity predictors.
+A new round of series 4 candidates for the [Open Source Malaria Project](https://github.com/opensourcemalaria), including molecules generated from low-data generative models (adapted from the [ETH Modlab](https://github.com/ETHmodlab/virtual_libraries)) and molecules generated in a second round using the [Reinvent 2.0](https://github.com/MolecularAI/Reinvent) generative model with improved activity predictors. See Open Source Malaria discussion [#34](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34).
 
 ## Data
 
-- All 405766 molecules generated (with duplicates eliminated) can be found [here](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_0.csv)
-- Selection of best 557 candidates according to the pipeline below, rendered the following [molecules](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_13.csv)
-- A final list of the **best** 90 candidates based on activity can be found [here](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/eosi_s4_candidates_90.csv)
-- Explore results in [this app](https://share.streamlit.io/ersilia-os/osm-series4-candidates-2/main/app.py)!
+- All 405,766 molecules generated (with duplicates eliminated) can be found here: [data_0.csv](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_0.csv)
+- A selection of the best 557 candidates according to the pipeline below, rendered the following molecules: [data_13.csv](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/data_13.csv)
+- A final list of the **best** 90 candidates based on activity can be found here: [eosi_s4_candidates_90.csv](https://github.com/ersilia-os/osm-series4-candidates-2/blob/main/scripts/results/eosi_s4_candidates_90.csv)
+- Explore the 90 candidates in [this app](https://share.streamlit.io/ersilia-os/osm-series4-candidates-2/main/app.py)!
 
-## Results Columns
+## Results columns
 
-The molecules are presented in an excel file containing the following columns:
+Candidate molecules are listed along with the following columns:
 
 ### Identifiers
 
@@ -35,41 +35,47 @@ descriptors are used for scaffold hopping
 
 - SAScore: Synthetic accessibility. The lower the better.
 - RAScore: Retrosynthetic accessibility as predicted by the [Reymond lab](https://github.com/reymond-group/RAscore). The higher the better.
-- SybaScore: Fragment-based accessibility score (https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2). The higher the better.
+- SybaScore: Fragment-based accessibility score by [Voršilák et al](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00439-2). The higher the better.
 
-### Physicochemical properties:
+### Physicochemical properties
 
-- SLogP: Solubility
-- QED: Drug-likeness
-- NumRings: Number of rings in the molecule
-- FractionCSP3: Number of tertiary carbons
-- FrHalogen: Number of halogen groups
-- HeavyAtom: Heavy atom count
-- Rotatable: Number of rotatable bonds
-- Heteroatoms: Number of Heteroatoms
-- FrAlkylHalide: Fragments containing Halides
-Molecular structure (1: existing, 0: not existing):
-- TriazoloHeteroaryl: Contains an heteroaryl ring in the RHS
-- TriazoloPhenyl: Contains a phenyl (no heteroatoms) in the RHS
+- SLogP: Solubility. Should be < 5.
+- QED: Drug-likeness. The higher the better.
+- NumRings: Number of rings in the molecule.
+- FractionCSP3: Number of tertiary carbons.
+- FrHalogen: Number of halogen groups.
+- HeavyAtom: Heavy atom count.
+- Rotatable: Number of rotatable bonds.
+- Heteroatoms: Number of Heteroatoms.
+- FrAlkylHalide: Fragments containing Halides.
+
+### Chemotype
+
+- TriazoloHeteroaryl: Contains an heteroaryl ring in the RHS.
+- TriazoloPhenyl: Contains a phenyl (no heteroatoms) in the RHS.
 - TriazoloHeteroaryl - Para / - Meta / - Orto: Contain substituents in para, meta or orto positions
 
-## Molecule generation
+## Molecule generation steps
 
-A first batch of molecules were generated in May2021 using the Reinvent 2.0 model. A detailed explanation as well as results analysis of this first round can be found in our GitHub repo [osm-series4-candidates](https://github.com/ersilia-os/osm-series4-candidates). We generated 116728 new series 4 candidates.
-A second batch of molecules (209310) has been generated for the purposes of this analysis using the Reinvent2.0 tool in exploration mode (optimizing for activity based on a simple QSAR model build with RDKIT descriptors).
-A third batch of molecules (150365) has been generated using a low-data generative model.
+1. A first batch of molecules were generated in May2021 using [Reinvent 2.0](https://github.com/MolecularAI/Reinvent). A detailed explanation as well as results analysis of this first round can be found in our GitHub repo [ersilia-os/osm-series4-candidates](https://github.com/ersilia-os/osm-series4-candidates). We generated 116,728 new series 4 candidates.
+2. A second batch of molecules (209,310) has been generated for the purposes of this analysis using Reinvent 2.0 in exploration mode and optimizing for activity based on a simple QSAR model build with RDKIT descriptors.
+3. A third batch of molecules (150,365) has been generated using a [low-data generative model](https://github.com/ETHmodlab/virtual_libraries) taking as pre-training populations the ChEMBL and a large fragments library.
 
 ## Selection of best candidates
 
-All unique final molecules (405766) have undergone a recursive selection process based on physicochemical properties, synthetic accessibility and predicted activity as follows:
+All unique final molecules (405,766) have undergone a recursive selection process based on physicochemical properties, synthetic accessibility and predicted activity as follows:
+
 ![](images/selection01.png)
 
+Scripts for the filterings applied can be found in the `scripts` folder in this repository.
 
 ## Run pipeline
 
-For transparency and reproducibility, we provide code to run the full pipeline for candidate selection. Please download and uncompress the following folders:
+For transparency and reproducibility, we provide code to run the full pipeline for candidate selection. Please download and uncompress the following folders and files:
 
 * [chemprop](https://drive.google.com/file/d/1WDN3NRTC4T98f-6St9YT8wDXO8foZOg5/view?usp=sharing)
 * [grover](https://drive.google.com/file/d/11_zSh1635KcP6GGgiVTozmE96A1N-z-U/view?usp=sharing)
+* [syba.pkl](https://drive.google.com/file/d/1tPA1vprB7gEwxMy_25Cz_PqDIEtzOBXK/view?usp=sharing) (save it in `utils/syba.pkl`)
+* [ra_model.onnx](https://drive.google.com/file/d/1x_Y5oOZOnxkb1hHjs8B9a8wlbF8izlGf/view?usp=sharing) (save it in `utils/ra_model.onnx`)
 
 The notebook with the process to select the best 90 candidates can be found [here](https://deepnote.com/project/Open-Source-Malaria-Series-4-Round-2-Zq8tjyh_Q4qjsK0NKdSk0A/%2Feosi_s4_candidates_90.csv).
