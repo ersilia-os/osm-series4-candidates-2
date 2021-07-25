@@ -2,9 +2,11 @@
 
 ## OSM Series 4 Candidates with Deep Generative Models - Round 2
 
-A new round of series 4 candidates for the [Open Source Malaria Project](https://github.com/opensourcemalaria), including molecules generated from low-data generative models (adapted from the [ETH Modlab](https://github.com/ETHmodlab/virtual_libraries)) and molecules generated in a second round using the [Reinvent 2.0](https://github.com/MolecularAI/Reinvent) generative model with improved activity predictors. See Open Source Malaria discussion [#34](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34).
+A new round of series 4 candidates for the [Open Source Malaria Project](https://github.com/opensourcemalaria), including molecules generated from low-data generative models (adapted from the [ETH Modlab](https://github.com/ETHmodlab/virtual_libraries)) and molecules generated in a second round using the [Reinvent 2.0](https://github.com/MolecularAI/Reinvent) generative model with improved activity predictors. See Open Source Malaria discussion [#34](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34). Here some candidates, sorted from less active 🔴 to more active 🔵, according to predictions:
 
-We have tried to complement OSM issue [#29](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34) opened by Evariste Technologies. In that issue, a specific region of the chemical space is **exploited** to identify highly active compounds. Here, we provide a rougher **exploration** of the chemical space with the hope to identify alternatie lead compounds:
+![animation_2](https://user-images.githubusercontent.com/19725330/126907922-99d365db-e671-42bb-a6a1-4227af9243e5.gif)
+
+We have tried to complement OSM issue [#29](https://github.com/OpenSourceMalaria/Series4_PredictiveModel/issues/34) opened by Evariste Technologies. In that issue, a specific region of the chemical space is **exploited** to identify highly active compounds. Here, we provide a rougher **exploration** of the chemical space with the hope to identify alternative lead compounds:
 
 ![exploration_vs_exploitation](https://user-images.githubusercontent.com/19725330/126868711-f834d617-6a0d-44c5-927f-11abd36541b7.png)
 
