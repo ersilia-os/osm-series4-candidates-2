@@ -88,4 +88,4 @@ For transparency and reproducibility, we provide code to run the full pipeline f
 * [syba.pkl](https://drive.google.com/file/d/1tPA1vprB7gEwxMy_25Cz_PqDIEtzOBXK/view?usp=sharing) (save it in `utils/syba.pkl`)
 * [ra_model.onnx](https://drive.google.com/file/d/1x_Y5oOZOnxkb1hHjs8B9a8wlbF8izlGf/view?usp=sharing) (save it in `utils/ra_model.onnx`)
 
-The notebook with the process to select the best 90 candidates can be found [here](https://deepnote.com/project/Open-Source-Malaria-Series-4-Round-2-Zq8tjyh_Q4qjsK0NKdSk0A/%2Feosi_s4_candidates_90.csv).
+The notebook with the process to select the best 90 candidates can be found [here](https://deepnote.com/workspace/Ersilia-Open-Source-Initiative-b7fa60d2-6421-41fb-85c1-c0bd16555826/project/Open-Source-Malaria-Series-4-Round-2-66af2d8f-287f-438a-a3b0-ad0d29d4a4d0/notebook/Ranked_predictions-8061b27ac04843fd93f043b0d7200ab7).
